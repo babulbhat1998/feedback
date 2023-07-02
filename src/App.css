@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Barlow', sans-serif;
+}
+.App{
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card{
+    box-shadow: 1px 1px 20px 1px #e3e3e3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.textarea {
+    resize: none;
+    padding: 10px;
+}
+.inputType{
+    padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.textarea:focus-visible, .inputType:focus-visible {
+    border-color: transparent;
+    outline: 1px solid #e5e7eb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.emoji i,
+.emoji .emojiInner:hover~.emojiInner i {
+    color: #737373;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.emoji:hover .emojiInner i {
+    color: #fc0;
+}
+
+.btn {
+    background-color: #316bbf;
+    padding: 10px 21px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 17px;
+}
+
+.tickIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tickIcons i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: mediumspringgreen;
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+    border-radius: 50%;
 }
